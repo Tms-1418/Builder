@@ -1,8 +1,8 @@
 # Patrón Builder en Java
 
-Tomás David Torres Morales - 20251020167
-José Miguel Bueno Martinez - 20251020093
-Jhomar Armando Bojaca Landinez - 20211020130
+Tomás David Torres Morales - 20251020167.
+José Miguel Bueno Martinez - 20251020093.
+Jhomar Armando Bojaca Landinez - 20211020130.
 
 ## Descripción
 
