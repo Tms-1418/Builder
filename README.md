@@ -31,7 +31,7 @@ Imagina que estamos haciendo el sistema de una inmobiliaria y necesitamos repres
 La primera idea que a uno se le ocurre es hacer varios constructores, uno por cada combinación:
 
 ```java
-public class Casa {
+public class CasaIncorrecta {
     private String direccion;
     private int habitaciones;
     private int banos;
@@ -41,25 +41,25 @@ public class Casa {
     private boolean tieneJardin;
     private boolean tieneChimenea;
 
-    public Casa(String direccion, int habitaciones) {
+    public CasaIncorrecta(String direccion, int habitaciones) {
         this.direccion = direccion;
         this.habitaciones = habitaciones;
     }
 
-    public Casa(String direccion, int habitaciones, int banos, int pisos) {
+    public CasaIncorrecta(String direccion, int habitaciones, int banos, int pisos) {
         this(direccion, habitaciones);
         this.banos = banos;
         this.pisos = pisos;
     }
 
-    public Casa(String direccion, int habitaciones, int banos, int pisos,
+    public CasaIncorrecta(String direccion, int habitaciones, int banos, int pisos,
                 boolean tienePiscina, boolean tieneGaraje) {
         this(direccion, habitaciones, banos, pisos);
         this.tienePiscina = tienePiscina;
         this.tieneGaraje = tieneGaraje;
     }
 
-    public Casa(String direccion, int habitaciones, int banos, int pisos,
+    public CasaIncorrecta(String direccion, int habitaciones, int banos, int pisos,
                 boolean tienePiscina, boolean tieneGaraje,
                 boolean tieneJardin, boolean tieneChimenea) {
         this(direccion, habitaciones, banos, pisos, tienePiscina, tieneGaraje);
@@ -72,9 +72,9 @@ public class Casa {
 Y así se crean las casas:
 
 ```java
-Casa campestre = new Casa("Vereda El Roble", 3, 2, 2, true, true, true, true);
-Casa sencilla  = new Casa("Calle 10 #5-20", 2, 0, 0, false, false, true, false);
-Casa error     = new Casa("Carrera 7 #45-10", 1, 4, 1, false, true, false, false);
+Casa campestre = new CasaIncorrecta("Vereda El Roble", 3, 2, 2, true, true, true, true);
+Casa sencilla  = new CasaIncorrecta("Calle 10 #5-20", 2, 0, 0, false, false, true, false);
+Casa error     = new CasaIncorrecta("Carrera 7 #45-10", 1, 4, 1, false, true, false, false);
 ```
 
 Funciona, pero tiene varios problemas:
@@ -252,7 +252,7 @@ Si la receta de la mansión cambia, se modifica en este único lugar.
 Este es `Main.java`. Crea tres casas con el Director, una a medida con el Builder, y prueba que la validación funciona:
 
 ```java
-public class Main {
+public class MainDirector {
     public static void main(String[] args) {
 
         DirectorCasa director = new DirectorCasa();
