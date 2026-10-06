@@ -1,5 +1,9 @@
 # Patrón Builder en Java
 
+Tomás David Torres Morales - 20251020167
+José Miguel Bueno Martinez - 20251020093
+Jhomar Armando Bojaca Landinez - 20211020130
+
 ## Descripción
 
 Builder es un patrón de diseño creacional. Se usa cuando un objeto tiene muchos datos y crearlo con un solo constructor se vuelve un lío. En lugar de pasar todos los valores de golpe, el objeto se va armando paso a paso con métodos que tienen nombre, y al final se llama a un método que lo entrega ya terminado.
